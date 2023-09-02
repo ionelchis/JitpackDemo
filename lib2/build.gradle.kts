@@ -52,3 +52,17 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
+dependencies.constraints {
+    // Android core dependencies
+    api("androidx.core:core-ktx:1.10.1")
+    api ("androidx.appcompat:appcompat:1.6.1")
+    api ("androidx.activity:activity-ktx:1.7.2")
+    api ("androidx.fragment:fragment-ktx:1.6.1")
+    api ("com.jakewharton.timber:timber:5.0.1")
+
+    // Android ui dependencies
+    api ("com.google.android.material:material:1.9.0")
+    api ("androidx.constraintlayout:constraintlayout:2.1.4")
+    api ("com.github.bumptech.glide:glide:4.16.0")
+}
