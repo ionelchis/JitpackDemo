@@ -4,6 +4,9 @@ plugins {
 }
 apply(plugin = "maven-publish")
 
+group = "com.ionelchis"
+version = "1.0.4"
+
 afterEvaluate {
     publishing {
         publications {
