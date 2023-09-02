@@ -4,20 +4,19 @@ plugins {
 }
 apply(plugin = "maven-publish")
 
-group = "com.github.ionelchis"
-version = "1.0.5"
+group = "com.github.ionelchis.JitpackDemo"
+version = "1.0.6"
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("mavenJava") {
-                from(components["javaPlatform"])
-            }
-        }
-    }
-}
 
 dependencies.constraints {
     api(project(":lib1"))
     api(project(":lib2"))
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("demoBomPublication") {
+            from(components["javaPlatform"])
+        }
+    }
 }

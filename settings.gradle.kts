@@ -15,7 +15,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "JitpackDemo"
-include(":app")
 include(":lib1")
 include(":lib2")
 include(":bom")
