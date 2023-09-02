@@ -5,8 +5,8 @@ plugins {
 }
 apply(plugin = "maven-publish")
 
-group = "com.github.ionelchis"
-version = "1.0.8"
+group = "com.github.ionelchis.JitpackDemo"
+version = "1.0.6"
 
 android {
     namespace = "com.ionelchis.lib1"
