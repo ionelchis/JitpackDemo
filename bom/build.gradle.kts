@@ -4,8 +4,8 @@ plugins {
 }
 apply(plugin = "maven-publish")
 
-group = "com.github.ionelchis.JitpackDemo"
-version = "1.0.7"
+group = "com.github.ionelchis"
+version = "1.0.8"
 
 dependencies.constraints {
     api(project(":lib1"))

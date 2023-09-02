@@ -5,6 +5,9 @@ plugins {
 }
 apply(plugin = "maven-publish")
 
+group = "com.github.ionelchis"
+version = "1.0.8"
+
 android {
     namespace = "com.ionelchis.lib1"
     compileSdk = 33
