@@ -5,7 +5,7 @@ plugins {
 apply(plugin = "maven-publish")
 
 group = "com.github.ionelchis.JitpackDemo"
-version = "1.0.6"
+version = "1.1.1"
 
 
 dependencies.constraints {
