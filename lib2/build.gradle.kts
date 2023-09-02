@@ -1,8 +1,9 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
+    `maven-publish`
 }
+apply(plugin = "maven-publish")
 
 android {
     namespace = "com.ionelchis.lib2"
@@ -31,32 +32,22 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
 
-    val sourcesJar by tasks.registering(Jar::class) {
-        archiveClassifier.set("sources")
-        from(android.sourceSets.getByName("main").java.srcDirs)
-    }
-
-    afterEvaluate {
-        publishing {
-            publications {
-                val release by publications.registering(MavenPublication::class) {
-                    from(components["release"])
-                    artifact(sourcesJar.get())
-                    artifactId = "lib2"
-                    groupId = "com.github.ionelchis.jitpackdemo"
-                    version = "1.0.0"
-                }
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
             }
         }
     }
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.google.android.material:material:1.9.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
