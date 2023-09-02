@@ -5,7 +5,7 @@ plugins {
 apply(plugin = "maven-publish")
 
 group = "com.github.ionelchis"
-version = "1.0.4"
+version = "1.0.5"
 
 afterEvaluate {
     publishing {
